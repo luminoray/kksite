@@ -22,6 +22,7 @@
         <li><a href="#class" class="toggler">Class</a></li>
         <li><a href="#div" class="toggler">Div</a></li>
         <li><a href="#span" class="toggler">Span</a></li>
+        <li><a href="#table" class="toggler">Table</a></li>
     </ul>
 
     <a href="index.html">Go home</a>
@@ -244,6 +245,83 @@ This is loose text outside the div. It takes a new line because the div is a blo
         <div class="demo">
             <h3>Demo</h3>
             <span>Each</span> <span>word</span> <span>is</span> <span>in</span> <span>a</span> <span>span</span>.
+
+        </div>
+    </div>
+
+
+    <div id="table" class="togglable">
+        <p>Tables are formed with several tags, but we will stick to the most basic and important: table, tr, td.</p>
+        <p>Tables can be very unwieldy, so it's preferred not to resort to them unless you actually need a table for displaying data.</p>
+        <p>For page structure, it's recommended to stick to other block elements (like div) and CSS.</p>
+        <h3>table</h3>
+        <p>This is the outermost tag of a table element. It contains everything else and delimits where it starts and ends.</p>
+        <blockquote>
+            <pre><code>
+&lt;table&gt;&lt;/table&gt;
+
+</code></pre>
+        </blockquote>
+        <h3>tr</h3>
+        <p>This is used to start a new row inside the table, and stands for table row.</p>
+        <p>A table element may contain multiple tr elements inside.</p>
+        <blockquote>
+            <pre><code>
+&lt;table&gt;
+    &lt;tr&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;/tr&gt;
+&lt;/table&gt;
+
+</code></pre>
+        </blockquote>
+        <h3>td</h3>
+        <p>This is used to place a new cell inside the table, and stands for table data. These go inside the tr elements, and contain the actual data of the table.</p>
+        <p>By setting the "colspan" and "rowspan" attributes to a number, you can make a cell take up the spots of multiple cells.</p>
+        <p>Cells fill from left to right, in order of appearance.</p>
+        <blockquote>
+            <pre><code>
+&lt;table&gt;
+    &lt;tr&gt;
+        &lt;td&gt;&lt;/td&gt;
+        &lt;td&gt;Ally&lt;/td&gt;
+        &lt;td&gt;Betray&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;Ally&lt;/td&gt;
+        &lt;td&gt;+1/+1&lt;/td&gt;
+        &lt;td&gt;-2/+3&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;Betray&lt;/td&gt;
+        &lt;td&gt;+3/-2&lt;/td&gt;
+        &lt;td&gt;+0/+0&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;
+
+</code></pre>
+        </blockquote>
+        
+
+        <div class="demo">
+            <h3>Demo</h3>
+            <table>
+                <tr>
+                    <td></td>
+                    <td>Ally</td>
+                    <td>Betray</td>
+                </tr>
+                <tr>
+                    <td>Ally</td>
+                    <td>+1/+1</td>
+                    <td>-2/+3</td>
+                </tr>
+                <tr>
+                    <td>Betray</td>
+                    <td>+3/-2</td>
+                    <td>+0/+0</td>
+                </tr>
+            </table>
 
         </div>
     </div>
