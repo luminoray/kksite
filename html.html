@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Lumino's KKSite - HTML Cheatsheet</title>
+</head>
+<body>
+
+<div class="sidebyside">
+<div>
+    <h1>HTML Cheatsheet</h1>
+
+    <ul class="menu">
+        <li><a href="#terms" class="toggler">Basic Terms</a></li>
+        <li><a href="#empty" class="toggler">Empty Template</a></li>
+        <li><a href="#paragraph" class="toggler">Paragraph</a></li>
+        <li><a href="#image" class="toggler">Image</a></li>
+        <li><a href="#link" class="toggler">Link</a></li>
+        <li><a href="#id" class="toggler">Id</a></li>
+        <li><a href="#class" class="toggler">Class</a></li>
+        <li><a href="#div" class="toggler">Div</a></li>
+        <li><a href="#span" class="toggler">Span</a></li>
+    </ul>
+
+    <a href="index.html">Go home</a>
+</div>
+
+<div>
+    <div id="terms" class="togglable">
+        <h3>Tag</h3>
+        <p>Tags are the markers that build up HTML. The ones that are enclosed inside the &lt;&gt;.</p>
+        <p>They can be an opening tag, a closing tag, or a self-closing tag. Which ones are self-closing is up to
+            experience and memorization.</p>
+        <p>For example:
+        <ul>
+            <li><em>&lt;p&gt;</em> is an opening p tag.</li>
+            <li><em>&lt;/p&gt;</em> is a closing p tag.</li>
+            <li><em>&lt;img&gt;</em> is a self-closing img tag.</li>
+        </ul>
+        </p>
+
+        <h3>Element</h3>
+        <p>An element is the entire HTML object, if you will. An element is made of its opening and closing tags, as
+            well as its content.</p>
+        <p>Here's an example of a paragraph element.</p>
+        <blockquote>
+            <pre><code>
+&lt;p&gt;I'm a paragraph element! Both tags and this text form the element!&lt;/p&gt;
+
+</code></pre>
+        </blockquote>
+        <p>Elements can also be inside of other elements.</p>
+
+        <h3>Attribute</h3>
+        <p>Attributes are the properties elements can have.</p>
+        <p>These values are assigned during the opening tag, and dictate the functionality or behavior of the element.
+        </p>
+        <p>Example of an image element with an "src" and an "alt" attribute:</p>
+
+        <blockquote>
+            <pre><code>
+&lt;img src="kkcyber.png" alt="This is an example image!"&gt;
+
+</code></pre>
+        </blockquote>
+
+        <h3>Block</h3>
+        <p>A block is a display type that causes the element to always take the entire width of the page. All other
+            elements before and after it will be above or below.</p>
+        <p>Some examples of block elements are p, h1~h6, ul, ol, div, table.</p>
+
+        <h3>Inline</h3>
+        <p>Inline elements are those that flow with the text, and are aligned to it.</p>
+        <p>Some examples of inline elements are img, a, span.</p>
+
+
+    </div>
+
+
+    <div id="empty" class="togglable">
+        <blockquote>
+            <pre><code>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Document&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    
+&lt;/body&gt;
+&lt;/html&gt;
+
+</code></pre>
+        </blockquote>
+    </div>
+
+
+    <div id="paragraph" class="togglable">
+        <p>The standard way to display text.</p>
+        <blockquote>
+            <pre><code>
+&lt;p&gt;Your paragraph goes here!&lt;/p&gt;
+&lt;p&gt;New elements appear below.&lt;/p&gt;
+
+</code></pre>
+        </blockquote>
+
+        <div class="demo">
+            <h3>Demo</h3>
+            <p>Your paragraph goes here!</p>
+            <p>New elements appear below.</p>
+        </div>
+    </div>
+
+
+    <div id="image" class="togglable">
+        <p>This shows an image. You put the url of the image in the "src" attribute, and a mouse over caption in the
+            "alt" attribute.</p>
+        <blockquote>
+            <pre><code>
+&lt;img src="kkcyber.png" alt="This is an example"&gt;
+
+</code></pre>
+        </blockquote>
+
+        <div class="demo">
+            <h3>Demo</h3>
+            <img src="kkcyber.png" alt="This is an example">
+        </div>
+    </div>
+
+
+    <div id="link" class="togglable">
+        <p>You can link to another site, or another section of your own site.</p>
+        <p>You can also set the "target" attribute to "_blank" to make it open in another window.</p>
+        <p>This is an inline element.</p>
+        <blockquote>
+            <pre><code>
+&lt;a href="http://twitch.tv/kkcyber"&gt;Watch KKCyber!&lt;/a&gt;
+&lt;a href="/"&gt;Go home&lt;/a&gt;
+
+</code></pre>
+        </blockquote>
+
+        <div class="demo">
+            <h3>Demo</h3>
+            <a href="http://twitch.tv/kkcyber">Watch KKCyber!</a><br>
+            <a href="/">Go home</a>
+        </div>
+    </div>
+
+
+    <div id="id" class="togglable">
+        <p>Like class, this is actually an attribute, not a tag.</p>
+        <p>The id attribute can be added to any element to give it a unique identifier. Since it's unique, only 1 element in the entire page can have an id with the same name.</p>
+        <p>On its own, this does nothing, but it makes it easier to target an element using CSS or Javascript.</p>
+        <p>Using a link, you can also scroll directly to an element in the same page by setting the "href" attribute to the name of the id with a hashtag.</p>
+        <blockquote>
+            <pre><code>
+&lt;a href="#boo"&gt;Scroll down!&lt;/a&gt;
+&lt;h4 id="boo"&gt;Boo!&lt;/a&gt;
+
+</code></pre>
+        </blockquote>
+
+        <div class="demo">
+            <h3>Demo</h3>
+            <a href="#boo">Scroll down!</a>
+            <div style="height: 6000px;"></div>
+            <h4 id="boo">Boo!</a>
+        </div>
+    </div>
+
+
+    <div id="class" class="togglable">
+        <p>Like id, this is actually an attribute, not a tag.</p>
+        <p>Unlike id, different elements can share the same class name.</p>
+        <p>On its own, this does nothing, but it makes it easier to target an element using CSS or Javascript.</p>
+        <p>Since multiple elements can share the same class name, they can be targeted together to assign similar properties or behavior.</p>
+        <p>In the following example, we use CSS to color all the elements red. Please see the <a href="css.html">css guide for more info</a>.</p>
+        <blockquote>
+            <pre><code>
+&lt;p class="redExample"&gt;This will be painted red!&lt;/p&gt;
+&lt;p&gt;This text is normal, except the word &lt;span class="redExample"&gt;red&lt;/span&gt;!&lt;/p&gt;
+&lt;style&gt;
+    .redExample {
+        color: red;
+    }
+&lt;/style&gt;
+
+</code></pre>
+        </blockquote>
+
+        <div class="demo">
+            <h3>Demo</h3>
+            <p class="redExample">This will be painted red!</p>
+            <p>This text is normal, except the word <span class="redExample">red</span>!</p>
+            <style>
+                .redExample {
+                    color: #ff0000;
+                }
+            </style>
+        </div>
+    </div>
+
+
+    <div id="div" class="togglable">
+        <p>A div is simply a block. You can put things inside of it and it will behave like a block.</p>
+        <p>This is not very useful on its own, but can be extremely powerful when combined with CSS and Javascript, as
+            you can group things together.</p>
+        <p>Each of these tutorials are contained inside a div, and displayed using Javascript when clicking the buttons.</p>
+        </p>
+        <blockquote>
+            <pre><code>
+&lt;div&gt;This is loose text inside a div.&lt;/div&gt;
+This is loose text outside the div. It takes a new line because the div is a block.
+
+</code></pre>
+        </blockquote>
+
+        <div class="demo">
+            <h3>Demo</h3>
+            <div>This is loose text inside a div.</div>
+            This is loose text outside the div. It takes a new line because the div is a block.
+
+        </div>
+    </div>
+
+
+    <div id="span" class="togglable">
+        <p>A span is an inline element without behavior.</p>
+        <p>This is not very useful on its own, but can be extremely powerful when combined with CSS and Javascript, as it simplifies applying style or behavior to anything inside it.</p>
+        <blockquote>
+            <pre><code>
+&lt;span&gt;Each&lt;/span&gt; &lt;span&gt;word&lt;/span&gt; &lt;span&gt;is&lt;/span&gt; &lt;span&gt;in&lt;/span&gt; &lt;span&gt;a&lt;/span&gt; &lt;span&gt;span&lt;/span&gt;.
+
+</code></pre>
+        </blockquote>
+
+        <div class="demo">
+            <h3>Demo</h3>
+            <span>Each</span> <span>word</span> <span>is</span> <span>in</span> <span>a</span> <span>span</span>.
+
+        </div>
+    </div>
+</div>
+
+</div>
+
+<script src="src.js"></script>
+
+</body>
+</html>
