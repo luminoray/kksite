@@ -7,8 +7,65 @@
     <title>Lumino's KKSite - CSS Basics</title>
 </head>
 <body>
-<h1>This section still under construction!</h1>
-<a href="index.html">Go home</a>
+
+<div class="sidebyside">
+<div>
+    <h1>CSS Basics</h1>
+
+    <ul class="menu">
+        <li><a href="#intro" class="toggler">Intro</a></li>
+    </ul>
+
+    <a href="index.html">Go home</a>
+</div>
+
+<div>
+    <div id="intro" class="togglable">
+        <p>To use a CSS file, you must use the &lt;link&gt; tag somewhere in your HTML files &lt;head&gt; section , and set the rel and href attributes as follows:</p>
+        <blockquote>
+            <pre><code>
+    &lt;link rel="stylesheet" href="filename.css"&gt;
+
+</code></pre>
+        </blockquote>
+        <p>A CSS file is made of multiple style definitions. Each definition is consists of a selector, a list of properties, and the values that those properties will take.</p>
+        <p>A style definition has the following format:</p>
+        <blockquote>
+            <pre><code>
+    selector {
+        property: value;
+        another-property: value;
+        more-property: value;
+    }
+
+</code></pre>
+        </blockquote>
+        <p>The selector defines the target element(s) to which the style will be applied.</p>
+        <p>Each property defines what will be changed about the targeted element.</p>
+        <p>The value defines what the property will be changed to.</p>
+        <p>In this example, we change the color of all &lt;p&gt; elements to red, and make the font size 20px.</p>
+        <blockquote>
+            <pre><code>
+    p {
+        color: red;
+        font-size: 20px;
+    }
+
+</code></pre>
+        </blockquote>
+
+        <div class="demo">
+            <h3>Demo</h3>
+            <p style="color:red; font-size: 20px;">This paragraph is red and bigger!</p>
+        </div>
+    </div>
+</div>
+    
+</div>
+
+
+
+<script src="src.js"></script>
     
 </body>
 </html>
