@@ -20,10 +20,12 @@
         <li><a href="#image" class="toggler">Image</a></li>
         <li><a href="#link" class="toggler">Link</a></li>
         <li><a href="#list" class="toggler">List</a></li>
+        <li><a href="#br" class="toggler">Line Break</a></li>
         <li><a href="#id" class="toggler">Id</a></li>
         <li><a href="#class" class="toggler">Class</a></li>
         <li><a href="#div" class="toggler">Div</a></li>
         <li><a href="#span" class="toggler">Span</a></li>
+        <li><a href="#hr" class="toggler">Separator</a></li>
         <li><a href="#table" class="toggler">Table</a></li>
     </ul>
 
@@ -250,6 +252,22 @@
     </div>
 
 
+    <div id="br" class="togglable">
+        <p>This creates a line break in text, and makes the following text appear in the line below.</p>
+        <blockquote>
+            <pre><code>
+This text is&lt;br&gt;broken into two!
+
+</code></pre>
+        </blockquote>
+
+        <div class="demo">
+            <h3>Demo</h3>
+            This text is<br>broken into two!
+        </div>
+    </div>
+
+
     <div id="class" class="togglable">
         <p>Like id, this is actually an attribute, not a tag.</p>
         <p>Unlike id, different elements can share the same class name.</p>
@@ -319,6 +337,27 @@ This is loose text outside the div. It takes a new line because the div is a blo
             <h3>Demo</h3>
             <span>Each</span> <span>word</span> <span>is</span> <span>in</span> <span>a</span> <span>span</span>.
 
+        </div>
+    </div>
+
+
+    <div id="hr" class="togglable">
+        <p>This displays a horizontal line across the available space. Useful for separating things into sections.</p>
+        <p>This is a block element.</p>
+        <blockquote>
+            <pre><code>
+Here's some text!
+&lt;hr&gt;
+Here's some more text!
+
+</code></pre>
+        </blockquote>
+
+        <div class="demo">
+            <h3>Demo</h3>
+            Here's some text!
+            <hr>
+            Here's some more text!
         </div>
     </div>
 
