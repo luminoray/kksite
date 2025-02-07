@@ -39,14 +39,17 @@ ul.menu {
 .menu li a {
     display: inline-block;
     padding: 10px 20px;
-    border: 2px solid #c99;
-    border-radius: 100px;
+    border: outset #c99;
     text-decoration: none;
     color: #000;
     font-size: 16px;
     font-weight: 600;
     text-wrap: nowrap;
     margin-bottom: 10px;
+}
+
+.menu li a:active {
+    border: inset;
 }
 
 blockquote {
