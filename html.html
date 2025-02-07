@@ -18,6 +18,7 @@
         <li><a href="#paragraph" class="toggler">Paragraph</a></li>
         <li><a href="#image" class="toggler">Image</a></li>
         <li><a href="#link" class="toggler">Link</a></li>
+        <li><a href="#list" class="toggler">List</a></li>
         <li><a href="#id" class="toggler">Id</a></li>
         <li><a href="#class" class="toggler">Class</a></li>
         <li><a href="#div" class="toggler">Div</a></li>
@@ -102,6 +103,7 @@
 
     <div id="paragraph" class="togglable">
         <p>The standard way to display text.</p>
+        <p>This is a block element.</p>
         <blockquote>
             <pre><code>
 &lt;p&gt;Your paragraph goes here!&lt;/p&gt;
@@ -121,6 +123,7 @@
     <div id="image" class="togglable">
         <p>This shows an image. You put the url of the image in the "src" attribute, and a mouse over caption in the
             "alt" attribute.</p>
+        <p>This is an inline element.</p>
         <blockquote>
             <pre><code>
 &lt;img src="kkcyber.png" alt="This is an example"&gt;
@@ -151,6 +154,48 @@
             <h3>Demo</h3>
             <a href="http://twitch.tv/kkcyber">Watch KKCyber!</a><br>
             <a href="/">Go home</a>
+        </div>
+    </div>
+
+
+    <div id="list" class="togglable">
+        <p>Can come in two styles, ordered and unordered, and the only difference is that one is numbered, while the other is bulleted, respectively.</p>
+        <p>Lists, combined with links are a popular choice for navigation menus.</p>
+        <p>Both the list, and the list item elements are blocks.</p>
+        <h3>ol, ul</h3>
+        <p>This is the outer element of the list, and is used to define the type of list, and contain the list items.</p>
+        <h3>li</h3>
+        <p>Regardless of the type of list, use li to define each item in the list.</p>
+        <blockquote>
+            <pre><code>
+&lt;ol&gt;
+    &lt;li&gt;Go to the store&lt;/li&gt;
+    &lt;li&gt;Buy ingredients&lt;/li&gt;
+    &lt;li&gt;???&lt;/li&gt;
+    &lt;li&gt;Profit&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+    &lt;li&gt;1 onion&lt;/li&gt;
+    &lt;li&gt;2 mushrooms&lt;/li&gt;
+    &lt;li&gt;3 eggs&lt;/li&gt;
+&lt;/ul&gt;
+
+</code></pre>
+        </blockquote>
+
+        <div class="demo">
+            <h3>Demo</h3>
+            <ol>
+                <li>Go to the store</li>
+                <li>Buy ingredients</li>
+                <li>???</li>
+                <li>Profit</li>
+            </ol>
+            <ul>
+                <li>1 onion</li>
+                <li>2 mushrooms</li>
+                <li>3 eggs</li>
+            </ul>
         </div>
     </div>
 
