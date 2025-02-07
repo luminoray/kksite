@@ -15,5 +15,8 @@ for(let toggler of togglers) {
 }
 
 for(let togglable of togglables) {
+    if (togglable === togglables[0]) {
+        continue;
+    }
     togglable.style.display = 'none';
 }
