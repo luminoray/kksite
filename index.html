@@ -19,52 +19,52 @@
             <img src="fail.gif">
             <p>&copy; Gif by pixelgrm</p>
         </a>
+        <br>
+        <div id="kkStatus">
+        </div>
     </div>
     
 </iframe>
 
 <script src= "https://player.twitch.tv/js/embed/v1.js"></script>
+<div id="twitch" style="display: none;"></div>
 
-  <div id="twitch" class="hide">
-  </div>
+<style>
+.hide {
+    display: none;
+}
+</style>
 
-  <style>
-    .hide {
-        display: none;
-    }
-  </style>
+<script type="text/javascript">
+var options = {
+    channel: "KKCYBER", // TODO: Change this to the streams username you want to embed
+    width: 1,
+    height: 1,
+    parent: ["luminoray.github.io"]
+};
+var player = new Twitch.Player("twitch", options);
 
-  <script type="text/javascript">
-    var options = {
-      channel: "KKCYBER", // TODO: Change this to the streams username you want to embed
-      width: 640,
-      height: 360,
-      parent: ["luminoray.github.io"]
-    };
-    var player = new Twitch.Player("twitch", options);
+player.addEventListener(Twitch.Player.ONLINE, kkAwake);
+player.addEventListener(Twitch.Player.OFFLINE, kkAsleep);
 
-    player.addEventListener(Twitch.Player.READY, initiate)
+function kkAwake() {
+    removeTriggers();
+    document.getElementById("kkStatus").classList.add("awake");
+}
 
-    function initiate() {
-      player.addEventListener(Twitch.Player.ONLINE, handleOnline);
-      player.addEventListener(Twitch.Player.OFFLINE, handleOffline);
-      player.removeEventListener(Twitch.Player.READY, initiate);
-    }
+function kkAsleep() {
+    removeTriggers();
+    document.getElementById("kkStatus").classList.add("awake");
+}
 
-    function handleOnline() {
-      document.getElementById("twitch").classList.remove('hide');
-      player.removeEventListener(Twitch.Player.ONLINE, handleOnline);
-      player.addEventListener(Twitch.Player.OFFLINE, handleOffline);
-      player.setMuted(false);
-    }
-
-    function handleOffline() {
-      document.getElementById("twitch").classList.add('hide');
-      player.removeEventListener(Twitch.Player.OFFLINE, handleOffline);
-      player.addEventListener(Twitch.Player.ONLINE, handleOnline);
-      player.setMuted(true);
-    }
-  </script>
+function removeTriggers() {
+    player.setMuted(true);
+    player.removeEventListener(Twitch.Player.ONLINE, handleOnline);
+    player.removeEventListener(Twitch.Player.OFFLINE, handleOffline);
+    document.getElementById("twitch").remove();
+    player = undefined;
+}
+</script>
 
 </body>
 </html>

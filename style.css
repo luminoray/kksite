@@ -73,3 +73,21 @@ blockquote {
 .demo h3 {
     margin: 0;
 }
+
+#kkStatus {
+    display: none;
+}
+
+#kkStatus.awake {
+    display: block;
+    width: 100px;
+    height: 100px;
+    background-color: green;
+}
+
+#kkStatus.asleep {
+    display: block;
+    width: 100px;
+    height: 100px;
+    background-color: red;
+}
