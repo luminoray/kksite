@@ -1,3 +1,4 @@
+(function () {
 var togglers = document.getElementsByClassName('toggler');
 var togglables = document.getElementsByClassName('togglable');
 
@@ -20,3 +21,4 @@ for(let togglable of togglables) {
     }
     togglable.style.display = 'none';
 }
+})();
