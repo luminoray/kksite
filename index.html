@@ -59,8 +59,8 @@ function kkAsleep() {
 
 function removeTriggers() {
     player.setMuted(true);
-    player.removeEventListener(Twitch.Player.ONLINE, handleOnline);
-    player.removeEventListener(Twitch.Player.OFFLINE, handleOffline);
+    player.removeEventListener(Twitch.Player.ONLINE, kkAwake);
+    player.removeEventListener(Twitch.Player.OFFLINE, kkAsleep);
     document.getElementById("twitch").remove();
     player = undefined;
 }
