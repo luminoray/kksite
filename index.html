@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src= "https://player.twitch.tv/js/embed/v1.js"></script>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="home.css">
     <title>Lumino's KKSite</title>
 </head>
 <body>
@@ -13,58 +15,33 @@
             <li><a href="html.html">HTML Basics</a></li>
             <li><a href="css.html">CSS Basics</a></li>
         </ul>
-        Girlfailure waifu
-        <br>
-        <a href="https://www.deviantart.com/pixelgrm/art/DJMAX-RESPECT-Fail-824854732">
-            <img src="fail.gif">
-            <p>&copy; Gif by pixelgrm</p>
-        </a>
-        <br>
-        <div id="kkStatus">
+        <div id="fail">
+            Girlfailure waifu
+            <br>
+            <a href="https://www.deviantart.com/pixelgrm/art/DJMAX-RESPECT-Fail-824854732">
+                <img src="fail.gif">
+                <p>&copy; Gif by pixelgrm</p>
+            </a>
+        </div>
+    </div>
+
+    <div id="kkStatus">
+        <div class="awake">
+            <a href="https://www.twitch.tv/KKCYBER">
+                <p>KK Cyber is live!</p>
+                <img src="images/awake.png">
+            </a>
+        </div>
+        <div class="asleep">
+            <img src="images/asleep.png">
         </div>
     </div>
     
 </iframe>
 
-<script src= "https://player.twitch.tv/js/embed/v1.js"></script>
+
 <div id="twitch" style="display: none;"></div>
-
-<style>
-.hide {
-    display: none;
-}
-</style>
-
-<script type="text/javascript">
-var options = {
-    channel: "KKCYBER", // TODO: Change this to the streams username you want to embed
-    width: 1,
-    height: 1,
-    parent: ["luminoray.github.io"]
-};
-var player = new Twitch.Player("twitch", options);
-
-player.addEventListener(Twitch.Player.ONLINE, kkAwake);
-player.addEventListener(Twitch.Player.OFFLINE, kkAsleep);
-
-function kkAwake() {
-    removeTriggers();
-    document.getElementById("kkStatus").classList.add("awake");
-}
-
-function kkAsleep() {
-    removeTriggers();
-    document.getElementById("kkStatus").classList.add("asleep");
-}
-
-function removeTriggers() {
-    player.setMuted(true);
-    player.removeEventListener(Twitch.Player.ONLINE, kkAwake);
-    player.removeEventListener(Twitch.Player.OFFLINE, kkAsleep);
-    document.getElementById("twitch").remove();
-    player = undefined;
-}
-</script>
+<script type="text/javascript" src="kkstatus.js"></script>
 
 </body>
 </html>

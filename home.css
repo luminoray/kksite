@@ -1,0 +1,63 @@
+#fail {
+    text-align: center;
+}
+
+#fail img {
+    position: relative;
+    left: 20px;
+}
+
+#kkStatus {
+    position: fixed;
+    margin: 0;
+    padding: 0;
+    bottom: 0;
+    left: 0;
+    font-size: 0;
+}
+
+#kkStatus div {
+    display: none;
+    width: 300px;
+}
+
+#kkStatus div a {
+    text-decoration: none;
+    display: block;
+}
+
+#kkStatus div a p {
+    color: #fff;
+    font-size: 30px;
+    text-shadow: 2px 2px 3px #000;
+    text-align: center;
+    transition: all 0.5s;
+    position: relative;
+    top: 0;
+}
+
+#kkStatus div img {
+    width: 300px;
+    position: relative;
+    left: 0;
+    top: 0;
+    transition: all 0.5s;
+}
+
+#kkStatus div:hover a p {
+    top: 30px;
+}
+
+#kkStatus div:hover a img {
+    left: -15px;
+    top: 15px;
+    width: 330px;
+}
+
+#kkStatus.awake div.awake {
+    display: block;
+}
+
+#kkStatus.asleep div.asleep {
+    display: block;
+}
