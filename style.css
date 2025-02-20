@@ -1,18 +1,18 @@
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 40px;
-    background: url('sunset-sky.jpg') no-repeat center center fixed;
+    background: url('images/sunset-sky.jpg') no-repeat center center fixed;
     background-size: cover;
 }
 
 a {
-    color: #a55;
+    color: #c57;
 }
 
 .window {
     background: #cdf;
     padding: 10px;
-    border: 5px ridge #c99;
+    border: 5px ridge #c57;
 }
 
 .sidebyside {
@@ -44,7 +44,7 @@ ul.menu {
 .menu li a {
     display: inline-block;
     padding: 10px 20px;
-    border: outset #c99;
+    border: outset #c57;
     text-decoration: none;
     color: #000;
     font-size: 16px;
