@@ -21,17 +21,17 @@ a {
 }
 
 .sidebyside div:first-child{
-    flex-basis: 400px;
+    flex-basis: 250px;
     flex-grow: 0;
     flex-shrink: 0;
 }
 
 .sidebyside>div:last-child {
     flex-grow: 1;
-    max-width: calc(100% - 450px);
+    max-width: calc(100% - 300px);
 }
 
-ul.menu {
+/*ul.menu {
     display: flex;
     flex-wrap: wrap;
     align-content: flex-start;
@@ -55,7 +55,7 @@ ul.menu {
 
 .menu li a:active {
     border: inset;
-}
+}*/
 
 blockquote {
     background: #433;
@@ -81,4 +81,3 @@ blockquote {
 .demo h3 {
     margin: 0;
 }
-
