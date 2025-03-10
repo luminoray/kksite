@@ -15,6 +15,9 @@
 
         <ul class="menu">
             <li><a href="#intro" class="toggler">Intro</a></li>
+            <li><a href="#selectors" class="toggler">Selectors</a></li>
+            <li><a href="#combinators" class="toggler">Combinators</a></li>
+            <hr>
             <li><a href="#text" class="toggler">Text</a></li>
         </ul>
 
@@ -64,6 +67,100 @@
         </div>
     </div>
 
+    <div id="selectors" class="togglable">
+        <h2>Selectors</h2>
+        <p>As stated in the intro, the selector states which element(s) the styles will be applied to.</p>
+        <h3>Tag</h3>
+        <p>A tag selector targets all elements of a certain type. For example, to target all &lt;p&gt; elements, the selector is simply "p".</p>
+        <blockquote>
+            <pre><code>
+    p {}
+
+</code></pre>
+        </blockquote>
+        <h3>Class</h3>
+        <p>A class selector targets all elements that have a certain class defined. In your HTML, you can define it with the "class" attribute, and you can assign a class to as many elements as necessary.</p>
+        <blockquote>
+            <pre><code>
+    &lt;p class="classExample"&gt;&lt;/p&gt;
+
+</code></pre>
+        </blockquote>
+        <p>To select a class with CSS, the classes' name must be preceded by a dot ".".</p>
+        <blockquote>
+            <pre><code>
+    .classExample {}
+
+</code></pre>
+        </blockquote>
+        <h3>ID</h3>
+        <p>An ID selector is similar to a class selector, but an ID can only be assigned to a single element in the page. In your HTML, you can define it with the "id" attribute.</p>
+        <blockquote>
+            <pre><code>
+    &lt;ul id="idExample"&gt;&lt;/ul&gt;
+
+</code></pre>
+        </blockquote>
+        <p>To select an ID with CSS, the ID's name must be preceded by a hash "#".</p>
+        <blockquote>
+            <pre><code>
+    #idExample {}
+
+</code></pre>
+        </blockquote>
+        <h3>Pseudo-Selector</h3>
+        <p>Pseudo-selectors apply some extra conditions to the selector, so not only the element has to be of the defined type, it also must meet the condition specified.</p>
+        <p>To specify a pseudo-selector, you must follow the main selector with a colon ":", and the name of the pseudo-selector. Here are some of the most common ones:</p>
+        <p><strong>:hover</strong> &mdash; The element has the mouse cursor on it, or is being touched on a touch-screen.</p>
+        <p><strong>:active</strong> &mdash; The element has been clicked / pressed, or is currently being clicked / pressed. Most common for links and buttons.</p>
+        <p><strong>:visited</strong> &mdash; The element is a link that leads to a page that has already been visited. By default, this is what makes visited links purple.</p>
+        <blockquote>
+            <pre><code>
+    a:hover {}
+    .myButton:active {}
+    #importantLink:visited {}
+
+</code></pre>
+        </blockquote>
+        <p>See the <a href="https://www.w3schools.com/CSSref/css_ref_pseudo_classes.php" target="_blank">w3 pseudo-class tutorial</a> for a more complete list.</p>
+    </div>
+
+    <div id="combinators" class="togglable">
+        <h3>Combinators</h3>
+        <p>Combinators allow you to combine selectors to make for more complex selection rules.</p>
+        <p><strong>Child (>)</strong> &mdash; Specifies elements that are directly inside of another. In this example, we target all &lt;p&gt; elements directly inside of another with class "exampleClass".</p>
+        <blockquote>
+            <pre><code>
+    .exampleClass > p {}
+
+</code></pre>
+        </blockquote>
+        <p><strong>Descendant (space)</strong> &mdash; Specifies elements that are anywhere inside of another, regardless of how many elements deep. In this example, we target all &lt;img&gt; elements inside of another with id "gallery".</p>
+        <blockquote>
+            <pre><code>
+    #gallery img {}
+
+</code></pre>
+        </blockquote>
+        <p><strong>List (,)</strong> &mdash; Allows for specifying multiple selectors, separated by comma. In this example, we target all &lt;ul&gt; and &lt;ol&gt; elements.</p>
+        <blockquote>
+            <pre><code>
+    ul, ol {}
+
+</code></pre>
+        </blockquote>
+        <p>Combinators may be chained together to achieve multiple effects, and used with the various types of selectors.</p>
+        <blockquote>
+            <pre><code>
+    ul>li, ol>li {}
+    #menu a {}
+    #gallery > div > img {}
+
+</code></pre>
+        </blockquote>
+        <p>See the <a href="https://www.w3schools.com/css/css_combinators.asp">w3 combinator tutorial</a> for a more complete list of combinators</p>
+    </div>
+
     <div id="text" class="togglable">
         <h2>Text styling</h2>
         <p>Here are some common properties used to style text.</p>
@@ -75,7 +172,7 @@
             </ul>
         </section>
         <section>
-            <p><strong>font-size</strong> &mdash; Changes the size of the text. Can be set in <a href="https://www.w3schools.com/cssref/css_units.php">various size units</a>.</p>
+            <p><strong>font-size</strong> &mdash; Changes the size of the text. Can be set in <a href="https://www.w3schools.com/cssref/css_units.php" target="_blank">various size units</a>.</p>
             <ul>
                 <li><span style="font-size: 2em;">font-size: 2em;</span></li>
                 <li><span style="font-size: 20px;">font-size: 20px;</span></li>
@@ -98,7 +195,7 @@
             </ul>
         </section>
         <section>
-            <p><strong>color</strong> &mdash; Changes the color of text and svg icons. Not to be confused with <strong>background-color</strong>, which sets the background color of an element. Can be set as text (red, green, blue), hex values (#13579b), or rgb/rgba. See the <a href="https://www.w3schools.com/colors/default.asp">w3 colors guide</a> for more details.</p>
+            <p><strong>color</strong> &mdash; Changes the color of text and svg icons. Not to be confused with <strong>background-color</strong>, which sets the background color of an element. Can be set as text (red, green, blue), hex values (#13579b), or rgb/rgba. See the <a href="https://www.w3schools.com/colors/default.asp" target="_blank">w3 colors guide</a> for more details.</p>
             <ul>
                 <li><span style="color: red;">color: red;</span></li>
                 <li><span style="color: #39a78d;">color: #39a78d;</span></li>
@@ -113,14 +210,14 @@
             </ul>
         </section>
         <section>
-            <p><strong>letter-spacing</strong> &mdash; Changes the space between letters. Can be set in <a href="https://www.w3schools.com/cssref/css_units.php">various size units</a>.</p>
+            <p><strong>letter-spacing</strong> &mdash; Changes the space between letters. Can be set in <a href="https://www.w3schools.com/cssref/css_units.php" target="_blank">various size units</a>.</p>
             <ul>
                 <li><span style="letter-spacing: 1.1em;">letter-spacing: 1.1em;</span></li>
                 <li><span style="letter-spacing: 2px;">letter-spacing: 2px;</span></li>
             </ul>
         </section>
         <section>
-            <p><strong>line-height</strong> &mdash; Changes the space between lines. Can be set in <a href="https://www.w3schools.com/cssref/css_units.php">various size units</a>, or the word "normal".</p>
+            <p><strong>line-height</strong> &mdash; Changes the space between lines. Can be set in <a href="https://www.w3schools.com/cssref/css_units.php" target="_blank">various size units</a>, or the word "normal".</p>
             <ul>
                 <li><span style="line-height: normal;">line-height: normal;<br>This is example text.</span></li>
                 <li><span style="line-height: 2em;">line-height: 2em;<br>This is example text.</span></li>

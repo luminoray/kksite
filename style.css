@@ -61,7 +61,7 @@ blockquote {
     background: #433;
     color: #ccc;
     padding: 0;
-    overflow-x: scroll;
+    overflow-x: auto;
     width: calc(100%-20px);
 
 }
